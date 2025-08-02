@@ -1,4 +1,5 @@
 cp -f /etc/nixos/configuration.nix $HOME/backup/nixos
+cp -f ~/.config/hypr/hyprland.conf $HOME/backup/configs
 
 cd $HOME/backup
 git add *

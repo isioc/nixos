@@ -24,6 +24,14 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
+  # wireguard
+  networking.wg-quick.interfaces = {
+    wg0 = {
+      configFile = "/etc/wireguard/SI_wg0.conf";
+      autostart = true;
+    };
+  };
+
   # Set your time zone.
   time.timeZone = "Europe/Moscow";
 
