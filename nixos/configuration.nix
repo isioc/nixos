@@ -4,8 +4,6 @@
 
 { config, pkgs, ... }:
 
-# git test
-
 {
   imports =
     [ # Include the results of the hardware scan.
