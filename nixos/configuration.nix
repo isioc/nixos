@@ -60,7 +60,13 @@
   users.users.c = {
     isNormalUser = true;
     description = "c";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "audio"
+      "input"
+      "pipewire"
+      "video"];
     packages = with pkgs; [];
   };
 
@@ -74,7 +80,7 @@
   waybar # taskbar
   wofi # menu
   networkmanagerapplet # network
-  blueman # bluetooth
+  blueberry # bluetooth
   git
 
   # touchpad
@@ -84,10 +90,25 @@
   # basic programs
   firefox
   telegram-desktop
+  discord
+
+  # joycons
+  joycond
 
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
   ];
+
+  # steam
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true;
+    dedicatedServer.openFirewall = true;
+  };
+
+  # joycons
+  services.joycond.enable = true;
+  boot.kernelModules = [ "joycond" "hid-nintendo" ];
 
   # hyprland
   programs.hyprland = {
@@ -112,10 +133,29 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
+    jack.enable = true;
   };
 
   # bluetooth
   hardware.bluetooth.enable = true;
+
+  # touchpad
+  services.xserver.libinput = {
+    enable = true;
+    touchpad = {
+      naturalScrolling = true;
+      tapping = true;
+      disableWhileTyping = true;
+    };
+  };
+
+  environment.sessionVariables = {
+    LIBINPUT_ACCEL_PROFILE = "flat";
+  };
+
+  services.udev.extraRules = ''
+    KERNEL=="event*", GROUP="input", MODE="0660"
+  '';
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
