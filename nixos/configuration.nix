@@ -159,7 +159,6 @@
 
   # aliases
   programs.bash = {
-#    enable = true;
     shellAliases = {
       b2g="~/backup/backup-script.sh";
       nixrs="sudo nixos-rebuild switch";
