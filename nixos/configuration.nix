@@ -78,7 +78,7 @@
 
   kitty # terminal
   waybar # taskbar
-  wofi # menu
+  rofi # menu
   networkmanagerapplet # network
   blueberry # bluetooth
   git
@@ -86,6 +86,11 @@
   # touchpad
   libinput
   libinput-gestures
+
+  # copy-paste
+  wl-clipboard
+  cliphist
+  grim
 
   # basic programs
   firefox
@@ -163,6 +168,8 @@
       b2g="~/backup/backup-script.sh";
       nixrs="sudo nixos-rebuild switch";
       nixclean="sudo nix-collect-garbage -d";
+      nixchange="sudo nano /etc/nixos/configuration.nix";
+      hyprchange="nano ~/.config/hypr/hyprland.conf";
     };
   };
 
