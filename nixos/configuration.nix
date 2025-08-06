@@ -157,6 +157,16 @@
     KERNEL=="event*", GROUP="input", MODE="0660"
   '';
 
+  # aliases
+  programs.bash = {
+#    enable = true;
+    shellAliases = {
+      b2g="~/backup/backup-script.sh";
+      nixrs="sudo nixos-rebuild switch";
+      nixclean="sudo nix-collect-garbage -d";
+    };
+  };
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
