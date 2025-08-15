@@ -81,21 +81,27 @@
   rofi # menu
   networkmanagerapplet # network
   blueberry # bluetooth
+  nautilus # file manager
   git
 
   # touchpad
   libinput
   libinput-gestures
 
-  # copy-paste
+  # postgresql
+  pgadmin  
+
+  # copy-paste (in progress)
   wl-clipboard
   cliphist
   grim
 
   # basic programs
   firefox
+  qbittorrent
   telegram-desktop
   discord
+  vscodium
 
   # joycons
   joycond
@@ -103,6 +109,16 @@
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
   ];
+
+  # postgresql
+  services.postgresql = {
+    enable = true;
+    ensureDatabases = [ "mydatabase" ];
+    authentication = pkgs.lib.mkOverride 10 ''
+      # type database DBuser auth-method
+      local  all      all    trust
+    '';
+  };
 
   # steam
   programs.steam = {
