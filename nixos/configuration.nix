@@ -88,8 +88,8 @@
   libinput
   libinput-gestures
 
-  # postgresql
-  pgadmin  
+  # postgresql gui
+  dbeaver-bin  
 
   # copy-paste (in progress)
   wl-clipboard
