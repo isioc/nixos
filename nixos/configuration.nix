@@ -102,6 +102,11 @@
   telegram-desktop
   discord
   vscodium
+  spotify
+
+  #photos
+  gthumb  
+  imagemagick
 
   # joycons
   joycond
