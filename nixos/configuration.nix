@@ -78,15 +78,24 @@
 
   kitty # terminal
   waybar # taskbar
-  rofi # menu
+  wofi # menu
   networkmanagerapplet # network
   blueberry # bluetooth
   nautilus # file manager
   git
 
+############################## wofie testie nya nya nya
+
+  gdk-pixbuf
+  librsvg
+  papirus-icon-theme
+  
   # touchpad
   libinput
   libinput-gestures
+
+  # wallpapers
+  swaybg
 
   # postgresql gui
   dbeaver-bin  
