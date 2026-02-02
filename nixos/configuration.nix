@@ -107,11 +107,11 @@
 
   # basic programs
   firefox
-  qbittorrent
-  telegram-desktop
-  discord
+  ayugram-desktop
+  webcord
   vscodium
   spotify
+  todoist-electron
 
   #photos
   gthumb  
