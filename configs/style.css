@@ -8,13 +8,13 @@
 /* } */
 
 *{
-  font-family: monospace;
-  font-size: 1.02em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 18px;
+
 }
 
 window{
-  /* background-color: #7C818C; */
-  background-color: ;
+    background-color: rgba(67, 76, 105, 0.4);
 }
 
 #input {
@@ -23,7 +23,7 @@ window{
   border: none;
   border-bottom: 3px solid grey;
   background-color: transparent /*#383C4A*/;
-  color: white;
+  color: rgb(67, 76, 105, 0.4);
   font-size: 1.4em;
 }
 
@@ -42,26 +42,37 @@ window{
 }
 
 #inner-box {
-  background-color: #383C4A;
+   background-color: rgba(67, 76, 105, 0.4);;
 }
 
 #outer-box {
 
   margin: 2px;
   padding:0px;
-  background-color: #383C4A;
+  background-color: rgba(67, 76, 105, 0.4);;
 }
 
 #text {
-  padding: 5px;
+  padding: 4px;
   color: white;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  xalign: 0.5;
+
+}
+
+#entry {
+  padding-left: 0px;
 }
 
 #entry:selected {
-  background-color: #5391e0;
+  background-color: rgba(77, 77, 77, 0.6);
+  text-align: center;
 }
 
 #text:selected {
+  background-color: rgba(77, 77, 77, 0.6);
 }
 
 #scroll {

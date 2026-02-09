@@ -1,21 +1,20 @@
-[configuration]
 # Размеры
-width = 390
-height = 400
-location = center
+width=390
+height=400
+location=center
 
 # Внешний вид
-mode = vertical
-orientation = vertical
-prompt = searching! (´｡• ω •｡`)
-allow_images = true
+mode=vertical
+orientation=vertical
+prompt=searching! (´｡• ω •｡`)
 allow_images=true
-image_size = 24
+image_size=24
 
 # Поведение
-filter_rate = 100
-hide_scrollbar = true
-no_actions = true
-always_parse_args = true
+filter_rate=100
+hide_scrollbar=true
+no_actions=true
+always_parse_args=true
 
-normal_window = true
+normal_window=true
+style=~/.config/wofi/style.css

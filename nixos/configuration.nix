@@ -83,12 +83,8 @@
   blueberry # bluetooth
   nautilus # file manager
   git
-
 ############################## wofie testie nya nya nya
-
-  gdk-pixbuf
-  librsvg
-  papirus-icon-theme
+  
   
   # touchpad
   libinput
@@ -108,7 +104,7 @@
   # basic programs
   firefox
   ayugram-desktop
-  webcord
+  discord
   vscodium
   spotify
   todoist-electron

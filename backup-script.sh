@@ -3,6 +3,7 @@ cp -f ~/.config/hypr/hyprland.conf $HOME/backup/configs # hyprland
 cp -f ~/.config/libinput-gestures.conf $HOME/backup/configs # touchpad
 cp -f ~/.config/wofi/config $HOME/backup/configs # wofi conf
 cp -f ~/.config/wofi/style.css $HOME/backup/configs # wofi style conf
+cp -f ~/.config/kitty/kitty.conf $HOME/backup/configs # kitty conf
 
 cd $HOME/backup
 git add *
