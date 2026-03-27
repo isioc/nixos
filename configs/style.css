@@ -18,13 +18,13 @@ window{
 }
 
 #input {
-  margin: 5px;
+  margin: 3px;
   border-radius: 0px;
   border: none;
   border-bottom: 3px solid grey;
   background-color: transparent /*#383C4A*/;
-  color: rgb(67, 76, 105, 0.4);
-  font-size: 1.4em;
+  color: rgb(240, 233, 233);
+  font-size: 1.0em;
 }
 
 /* search icon */

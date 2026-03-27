@@ -24,14 +24,6 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
-  # wireguard
-  networking.wg-quick.interfaces = {
-    wg0 = {
-      configFile = "/etc/wireguard/SI_wg0.conf";
-      autostart = true;
-    };
-  };
-
   # Set your time zone.
   time.timeZone = "Europe/Moscow";
 
@@ -70,11 +62,21 @@
     packages = with pkgs; [];
   };
 
+  # vpn
+  networking.nftables.enable = true;
+  services.v2raya = {
+    enable = true;
+    cliPackage = pkgs.xray;
+    };
+
   # allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
   # packages installed
   environment.systemPackages = with pkgs; [
+
+  # temp
+  pavucontrol
 
   kitty # terminal
   waybar # taskbar
@@ -82,15 +84,18 @@
   networkmanagerapplet # network
   blueberry # bluetooth
   nautilus # file manager
-  git
-############################## wofie testie nya nya nya
+  git  
+  nordzy-cursor-theme 
   
-  
+  # vpn temp
+  v2raya  
+  xray
+
   # touchpad
   libinput
   libinput-gestures
 
-  # wallpapers
+  # wallpapers (this one is going to die for hypr)
   swaybg
 
   # postgresql gui
@@ -100,10 +105,11 @@
   wl-clipboard
   cliphist
   grim
+  slurp
 
   # basic programs
   firefox
-  ayugram-desktop
+  telegram-desktop
   discord
   vscodium
   spotify
@@ -165,6 +171,7 @@
     alsa.support32Bit = true;
     pulse.enable = true;
     jack.enable = true;
+    wireplumber.enable = true;
   };
 
   # bluetooth
@@ -209,7 +216,7 @@
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
+  services.openssh.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
