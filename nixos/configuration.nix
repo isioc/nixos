@@ -78,6 +78,8 @@
   # temp
   pavucontrol
 
+  brightnessctl # screen brightness
+
   kitty # terminal
   waybar # taskbar
   wofi # menu
@@ -85,7 +87,6 @@
   blueberry # bluetooth
   nautilus # file manager
   git  
-  nordzy-cursor-theme 
   
   # vpn temp
   v2raya  

@@ -14,7 +14,7 @@
 }
 
 window{
-    background-color: rgba(67, 76, 105, 0.4);
+    background-color: rgba(91, 94, 102, 0);
 }
 
 #input {
@@ -31,7 +31,7 @@ window{
 #input:first-child > :nth-child(1) {
   min-height: 1.25em;
   min-width: 1.25em;
-  background-image: -gtk-icontheme('open-menu-symbolic');
+  /* background-image: -gtk-icontheme('open-menu-symbolic'); */
 }
 
 /* clear icon */
