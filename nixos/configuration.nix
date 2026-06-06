@@ -64,10 +64,35 @@
 
   # vpn
   networking.nftables.enable = true;
-  services.v2raya = {
+ services.v2raya = {
+ enable = true;
+cliPackage = pkgs.xray;
+ };
+#  programs.amnezia-vpn.enable = true; ####### отец это вот та строчка
+
+programs.coolercontrol.enable = true; # cooler control
+
+
+  # osis lab 3
+  # nginx
+  # port 80 is active for lab3
+
+  services.nginx = {
     enable = true;
-    cliPackage = pkgs.xray;
+  
+    virtualHosts."localhost" = {
+      root = "/var/www/lab3";
+      locations."/" = {
+        root = "/var/www/lab3";
+        index = "index.html";
     };
+  };
+};
+
+  # osis lab 4
+  # docker
+  virtualisation.docker.enable = true;
+  
 
   # allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -75,8 +100,8 @@
   # packages installed
   environment.systemPackages = with pkgs; [
 
-  # temp
-  pavucontrol
+  # python (for osis lab 3)
+  python311
 
   brightnessctl # screen brightness
 
@@ -102,6 +127,9 @@
   # postgresql gui
   dbeaver-bin  
 
+  # UWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+#  teamviewer
+
   # copy-paste (in progress)
   wl-clipboard
   cliphist
@@ -114,7 +142,6 @@
   discord
   vscodium
   spotify
-  todoist-electron
 
   #photos
   gthumb  
@@ -164,6 +191,8 @@
     enable = true;
     driSupport32Bit = true; # for steam ig
   };
+
+  programs.xwayland.enable = true;
 
   # sound
   services.pipewire = {
@@ -220,7 +249,7 @@
   services.openssh.enable = true;
 
   # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
+  networking.firewall.allowedTCPPorts = [ 80 ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;

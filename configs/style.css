@@ -14,7 +14,7 @@
 }
 
 window{
-    background-color: rgba(91, 94, 102, 0);
+    background-color: rgba(91, 94, 102, 0.25);
 }
 
 #input {
